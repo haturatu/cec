@@ -24,7 +24,7 @@
 
 # cec(crypto etf converter) - ETFデータ変換およびAPI
 
-このプロジェクトは、様々な暗号通貨のETF（上場投資信託）フローデータを自動的に取得し、CSV形式に変換し、RESTful APIを介して提供するための一連のサービスを提供します。
+このプロジェクトは、様々な暗号通貨のETF（上場投資信託）フローデータを自動的に取得し、CSV形式に変換し、RESTful APIを介して提供するための一連のサービスを提供します。  
 
 ## 機能
 
@@ -34,6 +34,7 @@
   - このwasmライブラリを使用しています: [GitHub - b-fuze/deno-dom: Browser DOM & HTML parser in Deno](https://github.com/b-fuze/deno-dom)  
   - コンテナ間(`converter-service`)でのみ機能する内部APIとして機能してます。  
 -   `converter-service`: 取得したHTMLデータを解析し、CSV形式に変換します。
+  - converter-service/csv_output/: 生成されたCSVファイルが格納されるディレクトリ
   - Pythonを使用して実装されています。
   - このコンテナ自体は、`fetcher-service`のAPIを介してHTMLデータを取得します。  
 -   `api-service`: 変換されたCSVデータを読み込み、RESTful APIを介してクライアントに提供します。
@@ -98,9 +99,6 @@ ETF_SOL_URL="https://farside.co.uk/sol/"
     command: ["python", "main.py", "--interval", "3600"] # この行を追加
     volumes:
       - csv_data:/app/csv_output
-    depends_on:
-      fetcher:
-        condition: service_healthy
     environment:
       - DENO_API_URL=http://fetcher:8000
     env_file:
