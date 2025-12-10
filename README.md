@@ -45,7 +45,7 @@
 
 ```bash
 docker-compose up --build -d fetcher converter
-    ```
+```
 
 ## 非ルートユーザーでの実行
 
