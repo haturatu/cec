@@ -28,6 +28,15 @@
 
 ## 機能
 
+## それぞれのコンテナ
+-   `fetcher-service`: 指定されたURLからETFフローデータを定期的に取得し、HTML形式で保存します。
+  - Denoを使用して実装されています。
+    - このwasmライブラリを仕様しています: [GitHub - b-fuze/deno-dom: Browser DOM & HTML parser in Deno](https://github.com/b-fuze/deno-dom)  
+-   `converter-service`: 取得したHTMLデータを解析し、CSV形式に変換します。
+    - Pythonを使用して実装されています。
+-   `api-service`: 変換されたCSVデータを読み込み、RESTful APIを介してクライアントに提供します。
+  - Python(FastAPI)を使用して実装されています。
+
 ## 非ルートユーザーでの実行
 
 デフォルトでは、Dockerコンテナはrootユーザーとして実行されます。セキュリティを向上させるために、`userns-remap`機能を使用して、コンテナを非rootユーザーとして実行するようにDockerデーモンを設定することが推奨されます。
