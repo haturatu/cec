@@ -31,7 +31,7 @@
 ## それぞれのコンテナ
 -   `fetcher-service`: 指定されたURLからETFフローデータを定期的に取得し、HTML形式で保存します。
   - Denoを使用して実装されています。
-  - このwasmライブラリを使用しています: [GitHub - b-fuze/deno-dom: Browser DOM & HTML parser in Deno](https://github.com/b-fuze/deno-dom)  
+    - このwasmライブラリを使用しています: [GitHub - b-fuze/deno-dom: Browser DOM & HTML parser in Deno](https://github.com/b-fuze/deno-dom)  
   - コンテナ間(`converter-service`)でのみ機能する内部APIとして機能してます。  
 -   `converter-service`: 取得したHTMLデータを解析し、CSV形式に変換します。
   - `csv/`: 生成されたCSVファイルが格納されるディレクトリ
