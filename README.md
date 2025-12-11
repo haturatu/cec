@@ -2,8 +2,10 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [ETFデータ変換およびAPI](#etf%E3%83%87%E3%83%BC%E3%82%BF%E5%A4%89%E6%8F%9B%E3%81%8A%E3%82%88%E3%81%B3api)
+- [cec(crypto etf converter) - ETFデータ変換およびAPI](#ceccrypto-etf-converter---etf%E3%83%87%E3%83%BC%E3%82%BF%E5%A4%89%E6%8F%9B%E3%81%8A%E3%82%88%E3%81%B3api)
   - [機能](#%E6%A9%9F%E8%83%BD)
+  - [それぞれのコンテナ](#%E3%81%9D%E3%82%8C%E3%81%9E%E3%82%8C%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A)
+  - [APIサーバが不要な場合](#api%E3%82%B5%E3%83%BC%E3%83%90%E3%81%8C%E4%B8%8D%E8%A6%81%E3%81%AA%E5%A0%B4%E5%90%88)
   - [非ルートユーザーでの実行](#%E9%9D%9E%E3%83%AB%E3%83%BC%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%A7%E3%81%AE%E5%AE%9F%E8%A1%8C)
   - [はじめに](#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB)
     - [前提条件](#%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6)
