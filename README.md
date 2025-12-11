@@ -34,7 +34,7 @@
   - このwasmライブラリを使用しています: [GitHub - b-fuze/deno-dom: Browser DOM & HTML parser in Deno](https://github.com/b-fuze/deno-dom)  
   - コンテナ間(`converter-service`)でのみ機能する内部APIとして機能してます。  
 -   `converter-service`: 取得したHTMLデータを解析し、CSV形式に変換します。
-  - converter-service/csv_output/: 生成されたCSVファイルが格納されるディレクトリ
+  - `csv/`: 生成されたCSVファイルが格納されるディレクトリ
   - Pythonを使用して実装されています。
   - このコンテナ自体は、`fetcher-service`のAPIを介してHTMLデータを取得します。  
 -   `api-service`: 変換されたCSVデータを読み込み、RESTful APIを介してクライアントに提供します。
