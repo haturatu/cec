@@ -29,15 +29,15 @@
 ## 機能
 
 ## それぞれのコンテナ
--   `fetcher-service`: 指定されたURLからETFフローデータを定期的に取得し、HTML形式で保存します。
+- `fetcher-service`: 指定されたURLからETFフローデータを定期的に取得し、HTML形式で保存します。
   - Denoを使用して実装されています。
     - このwasmライブラリを使用しています: [GitHub - b-fuze/deno-dom: Browser DOM & HTML parser in Deno](https://github.com/b-fuze/deno-dom)  
   - コンテナ間(`converter-service`)でのみ機能する内部APIとして機能してます。  
--   `converter-service`: 取得したHTMLデータを解析し、CSV形式に変換します。
-  - `csv/`: 生成されたCSVファイルが格納されるディレクトリ
+- `converter-service`: 取得したHTMLデータを解析し、CSV形式に変換します。
   - Pythonを使用して実装されています。
+  - `csv/`: 生成されたCSVファイルが格納されるディレクトリ
   - このコンテナ自体は、`fetcher-service`のAPIを介してHTMLデータを取得します。  
--   `api-service`: 変換されたCSVデータを読み込み、RESTful APIを介してクライアントに提供します。
+- `api-service`: 変換されたCSVデータを読み込み、RESTful APIを介してクライアントに提供します。
   - Python(FastAPI)を使用して実装されています。
   - `converter-service`が最初のCSVデータセットを生成した後に利用可能になります。
 
