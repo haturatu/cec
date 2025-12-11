@@ -24,6 +24,6 @@ def load_and_clean_data(coin_type: str, include_seed: bool) -> Optional[pd.DataF
     # Fill NaN values in all columns (except Date) with 0
     for col in df.columns:
         if col != 'Date':
-            df[col].fillna(0, inplace=True)
+            df[col] = df[col].fillna(0)
 
     return df
